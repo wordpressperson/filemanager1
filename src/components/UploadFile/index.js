@@ -44,6 +44,7 @@ const UploadFile = ({ currentFolder }) => {
       "pptx",
       "docx",
       "png",
+      "PNG",
       "jpg",
       "jpeg",
       "gif",
@@ -70,7 +71,7 @@ const UploadFile = ({ currentFolder }) => {
               file.data.name === fileName.split("\\").reverse()[0]
           );
     if (filteredFiles.length > 0)
-      return toast.dark("This is alredy present in folder");
+      return toast.dark("This is already present in folder");
 
     const uploadFileRef = storage.ref(`files/${userId}/${file.name}`);
 
