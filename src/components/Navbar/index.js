@@ -27,7 +27,7 @@ const NavbarComponent = () => {
         to="/"
         style={{ marginLeft: "60px", marginRight: "auto" }}
       >
-        File Management System
+        WCI Accra Audio msgs
       </Navbar.Brand>
       <Nav style={{ marginRight: "60px" }}>
         {isLoggedIn ? (
