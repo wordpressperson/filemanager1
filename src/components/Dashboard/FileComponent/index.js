@@ -80,11 +80,14 @@ const FileComponent = () => {
       (currentFile.data.url === "" ||
         !currentFile.data.name.includes(".jpg") ||
         !currentFile.data.name.includes(".png") ||
+       !currentFile.data.name.includes(".PNG") ||
         !currentFile.data.name.includes(".jpeg") ||
         !currentFile.data.name.includes(".doc") ||
         !currentFile.data.name.includes(".ppt") ||
         !currentFile.data.name.includes(".pptx") ||
         !currentFile.data.name.includes(".xls") ||
+         !currentFile.data.name.includes(".mp3") ||
+         !currentFile.data.name.includes(".mp4") ||
         !currentFile.data.name.includes(".rar"))
     ) {
       setData(currentFile.data.data);
@@ -107,11 +110,14 @@ const FileComponent = () => {
         currentFile.data.url === "" &&
         (!currentFile.data.name.includes(".jpg") ||
           !currentFile.data.name.includes(".png") ||
+          !currentFile.data.name.includes(".PNG") ||
           !currentFile.data.name.includes(".jpeg") ||
           !currentFile.data.name.includes(".doc") ||
           !currentFile.data.name.includes(".ppt") ||
           !currentFile.data.name.includes(".pptx") ||
           !currentFile.data.name.includes(".xls") ||
+           !currentFile.data.name.includes(".mp3") ||
+           !currentFile.data.name.includes(".mp4") ||
           !currentFile.data.name.includes(".rar")) ? (
           <>
             <Header
@@ -154,6 +160,9 @@ const FileComponent = () => {
           currentFile.data.name
             .split(".")
             [currentFile.data.name.split(".").length - 1].includes("jpg") ||
+          currentFile.data.name
+            .split(".")
+            [currentFile.data.name.split(".").length - 1].includes("PNG") ||
           currentFile.data.name
             .split(".")
             [currentFile.data.name.split(".").length - 1].includes("jpeg") ||
